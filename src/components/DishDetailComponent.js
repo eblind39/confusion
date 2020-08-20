@@ -50,6 +50,7 @@ class DishDetail extends Component {
         return(
 
             <div className="row">
+                {/* Dish section including the picture and name of the dish */}
                 <div className="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 m-1">
                     <Card>
                         <CardImg className="100%" src={dish.image} alt={dish.name} />
@@ -58,6 +59,7 @@ class DishDetail extends Component {
                     </Card>
                 </div>
 
+                {/* Comments section with a dedicated function to render them. */}
                 <div className="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 m-1">
                     {this.renderComments(this.props.dish.comments)}
                 </div>
