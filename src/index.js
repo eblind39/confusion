@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
-import Footer from './Footer';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
@@ -11,11 +10,6 @@ ReactDOM.render(
     <App />
   </React.StrictMode>,
   document.getElementById('root')
-);
-
-ReactDOM.render(
-    <Footer />,
-    document.getElementById('footer')
 );
 
 // If you want your app to work offline and load faster, you can change
