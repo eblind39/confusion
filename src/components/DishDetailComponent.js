@@ -17,7 +17,7 @@ class DishDetail extends Component {
                 <div></div>
             );
 
-        /* Iterate and format the corresponding comments for the selected dish. */
+        /* Iterate and format the corresponding JSX for the comments. */
         const commentsFmt = comments.map((comment) => {
             return (
                 <div key={comment.id}>
