@@ -21,12 +21,8 @@ class DishDetail extends Component {
         const commentsFmt = comments.map((comment) => {
             return (
                 <div key={comment.id}>
-                    <Media tag="li">
-                        <p>{comment.comment}</p>
-                    </Media>
-                    <Media tag="li">
-                        <p>{'--' + comment.author + ', ' + comment.date}</p>
-                    </Media>
+                    <li>{comment.comment}</li>
+                    <li>{'--' + comment.author + ', ' + new Intl.DateTimeFormat('es-NI', {year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</li>
                 </div>
             );
         });
@@ -35,7 +31,7 @@ class DishDetail extends Component {
             <div>
                 <h4>Comments</h4>
                 {/* Use a Bootstrap list-unstyled to show the comments */}
-                <Media list>{commentsFmt}</Media>
+				<ul className="list-unstyled">{commentsFmt}</ul>
             </div>
         );
     }
@@ -71,7 +67,7 @@ class DishDetail extends Component {
     render() {
 
         return(
-            <div>
+            <div className="container">
                 {this.renderDish(this.props.dish)}
             </div>
         );
