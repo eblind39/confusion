@@ -1,0 +1,66 @@
+[33mcommit 7b6b95f2175e2efe0201fcdf124928f2aae9ddf6[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Ernesto Gutierrez <ergutierrez39@gmail.com>
+Date:   Thu Aug 27 22:37:37 2020 -0600
+
+    Functional Components
+
+[33mcommit 79aea4976878b87caeace382740621c2b662f64f[m
+Merge: 67e5559 b51b88d
+Author: Ernesto Gutierrez <ergutierrez39@gmail.com>
+Date:   Mon Aug 24 22:58:36 2020 -0600
+
+    Merge branch 'master' of https://github.com/eblind39/confusion
+
+[33mcommit 67e55594a0ee9fab7cc6105dafb4c002a3480a62[m
+Author: Ernesto Gutierrez <ergutierrez39@gmail.com>
+Date:   Mon Aug 24 22:57:04 2020 -0600
+
+    Presentational and Container Components
+
+[33mcommit b51b88d22a6fccd9117a908190b7fb13dd10bb5f[m
+Author: Ernesto Gutiérrez Chavarría <egutierrez@cgclatam.com>
+Date:   Mon Aug 24 13:11:40 2020 -0600
+
+    docs: A more accurate comment was added.
+
+[33mcommit ba4f7758680a4a4aa0ea17c8b13e1f74471f7e97[m
+Author: Ernesto Gutierrez <ergutierrez39@gmail.com>
+Date:   Thu Aug 20 09:07:20 2020 -0600
+
+    docs: Comments for the new DishDetailComponentes were added
+
+[33mcommit e2b896004454ba2c92aaab1e45fd261f262f9ebe[m
+Author: Ernesto Gutierrez <ergutierrez39@gmail.com>
+Date:   Thu Aug 20 09:01:26 2020 -0600
+
+    feat: A new DishDetailComponent was added
+
+[33mcommit 116a634494ab050d988f5377300aeffae722e5fa[m
+Author: Ernesto Gutiérrez <ergutierrez39@gmail.com>
+Date:   Wed Aug 19 06:35:05 2020 -0600
+
+    Components Part 2
+
+[33mcommit d87f8e48a426e9ff983593a4f3b9b81d3c2447b7[m
+Author: Ernesto Gutiérrez <ergutierrez39@gmail.com>
+Date:   Wed Aug 19 04:57:08 2020 -0600
+
+    List the Menu containig the dishes.
+
+[33mcommit 5929b7647de8b13136a65cc61005d429f6557328[m
+Author: Ernesto Gutiérrez <ergutierrez39@gmail.com>
+Date:   Mon Aug 17 21:34:40 2020 -0600
+
+    Adding reactstrap, bootstrap and react-popper
+
+[33mcommit 5116acba1603b9bef701da72f867bdff89eb196d[m
+Author: Ernesto Gutiérrez <ergutierrez39@gmail.com>
+Date:   Mon Aug 17 21:09:07 2020 -0600
+
+    First component - Footer
+
+[33mcommit bb228a07cd1776b2f1cc7fff4a6efaf228bd5134[m
+Author: Ernesto Gutiérrez <ergutierrez39@gmail.com>
+Date:   Mon Aug 17 20:07:07 2020 -0600
+
+    Initialize project using Create React App
