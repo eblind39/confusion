@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Home from './HomeComponent';
 import Menu from './MenuComponent';
 import DishDetail from './DishDetailComponent';
-import AboutUs from './AboutUsComponent';
+import About from './AboutComponent';
 import Contact from './ContactComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
@@ -44,12 +44,13 @@ class Main extends Component {
             );
         }
         
+        //* integrate the AboutComponent into the SPA by adding a new Route for this About component.
         return (
             <div>
                 <Header />
                 <Switch>
                     <Route path="/home" component={HomePage} />
-                    <Route path="/aboutus" component={AboutUs} />
+                    <Route exact path="/aboutus" component={() => <About leaders={this.state.leaders} />} />
                     <Route exact path="/contactus" component={Contact} />
                     <Route exact path="/menu" component={() => <Menu dishes={ this.state.dishes } /> } />
                     <Route exact path="/menu/:dishId" component={DishWithId} />
