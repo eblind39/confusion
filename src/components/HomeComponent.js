@@ -4,6 +4,7 @@ import Loading from './LoadingComponent';
 import { baseUrl } from '../data/baseUrl';
 
 function RenderCard({item, isLoading, errMess}) {
+    if (typeof item === 'undefined') return <div></div>
     if (isLoading) {
         return(
             <Loading />

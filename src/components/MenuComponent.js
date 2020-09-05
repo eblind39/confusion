@@ -28,8 +28,6 @@ const Menu = (props) => {
             </div>
         );
     });
-    console.log('AQUI', props);
-    console.log('OTRO', props.dishes.dishes);
 
     if (props.dishes.isLoading) {
         return(

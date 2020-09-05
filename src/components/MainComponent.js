@@ -63,7 +63,6 @@ class Main extends Component {
             );
         }
         
-        //* integrate the AboutComponent into the SPA by adding a new Route for the About component.
         return (
             <div>
                 <Header />
