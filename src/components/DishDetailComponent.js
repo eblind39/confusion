@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardTitle, Breadcrumb, BreadcrumbItem, Nav, NavItem, Button, Col, Row, Modal, ModalHeader, ModalBody, Label } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
+import { Loading } from './LoadingComponent'
 
 const maxLength = (len) => (val) => !(val) ||  (val.length <= len);
 const minLength = (len) => (val) => val &&  (val.length >= len);
@@ -25,7 +26,6 @@ class CommentForm extends Component {
 
     handleSubmit(values) {
         console.log("Current state is: " + JSON.stringify(values));
-        alert("Current state is: " + JSON.stringify(values));
         this.toggleModal();
         this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
     }
@@ -162,7 +162,25 @@ function RenderComments({comments, addComment, dishId}) {
 }
 
 const DishDetail = (props) => {
-    if (typeof props.dish === "undefined") return <div></div>;
+    if (props.isLoading) {
+        return(
+            <div className="container">
+                <div className="row">
+                    <Loading />
+                </div>
+            </div>
+        );
+    } else if (props.errMess) {
+        return(
+            <div className="container">
+                <div className="row">
+                    <h4>{props.errMess}</h4>
+                </div>
+            </div>
+        );
+    } else if (typeof props.dish === "undefined") {
+                return <div></div>;
+    }
     return(
         <div className="container">
             <div className="row">
