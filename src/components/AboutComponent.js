@@ -1,6 +1,7 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { baseUrl } from '../data/baseUrl';
 
 //* Receives the details of a leader as its parameter
 //* props.leader
@@ -10,7 +11,7 @@ function RenderLeader({leader}) {
         <div className="container">
             <Media tag="li">
                 <Media left top>
-                    <Media object src={leader.image} alt={leader.name} />
+                    <Media object src={baseUrl + leader.image} alt={leader.name} />
                 </Media>
                 <Media body className="ml-5">
                     <Media heading>

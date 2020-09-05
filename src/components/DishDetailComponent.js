@@ -3,6 +3,7 @@ import { Card, CardImg, CardText, CardTitle, Breadcrumb, BreadcrumbItem, Nav, Na
 import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import { Loading } from './LoadingComponent'
+import { baseUrl } from '../data/baseUrl';
 
 const maxLength = (len) => (val) => !(val) ||  (val.length <= len);
 const minLength = (len) => (val) => val &&  (val.length >= len);
@@ -122,7 +123,7 @@ function RenderDish({dish}) {
         <div>
             {/* Dish section including the picture and name of the dish */}
             <Card>
-                <CardImg className="100%" src={dish.image} alt={dish.name} />
+                <CardImg className="100%" src={baseUrl + dish.image} alt={dish.name} />
                 <CardTitle className="bold-text">{dish.name}</CardTitle>
                 <CardText>{dish.description}</CardText>
             </Card>
