@@ -114,10 +114,7 @@ class CommentForm extends Component {
 
 function RenderDish({dish}) {
     /* If the dish is null then return an empty <div> */
-    if (dish == null)
-        return (
-            <div></div>
-        );
+    if (dish == null) return (<div></div>);
 
     return(
 
@@ -143,25 +140,21 @@ function RenderComments({comments, postComment, dishId}) {
     /* If the comments are null then return an empty <div> */
     if (comments == null) return (<div></div>);
 
-    /* Iterate and format the corresponding JSX for the comments. */
-    // <Stagger in>
-    const commentsFmt = comments.map((comment) => {
-            return (
-                // <Fade in>
-                    <li key={comment.id}>
-                        <p>{comment.comment}</p>
-                        <p>{'--' + comment.author + ', ' + new Intl.DateTimeFormat('es-NI', {year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
-                    </li>
-                // </Fade>
-            );
-        });
-    // </Stagger>
-
     return(
         <div>
             <h4>Comments</h4>
-            {/* Use a Bootstrap list-unstyled to show the comments */}
-            <ul className="list-unstyled">{commentsFmt}</ul>
+            <Stagger in>
+                {comments.map((comment) => {
+                    return (
+                        <Fade in>
+                            <li key={comment.id}>
+                                <p>{comment.comment}</p>
+                                <p>-- {comment.author} , {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
+                            </li>
+                        </Fade>
+                    );
+                })}
+            </Stagger>
             <CommentForm 
                 dishId={dishId}
                 postComment={postComment}
